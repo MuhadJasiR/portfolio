@@ -1,5 +1,7 @@
 import 'dart:ui';
 
+import 'package:feather_icons/feather_icons.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants/constants_size.dart';
 
@@ -40,27 +42,24 @@ class DesktopBody extends StatelessWidget {
                           backgroundColor: Colors.black12.withOpacity(0.1),
                           child: IconButton(
                               onPressed: () {},
-                              icon: const Icon(
-                                Icons.home_max_rounded,
-                                color: Colors.white,
-                              )),
+                              icon: Icon(FeatherIcons.airplay)),
                         ),
                         IconButton(
                             onPressed: () {},
                             icon: const Icon(
-                              Icons.home_max_rounded,
+                              CupertinoIcons.person_circle,
                               color: Colors.white70,
                             )),
                         IconButton(
                             onPressed: () {},
                             icon: const Icon(
-                              Icons.home_max_rounded,
+                              CupertinoIcons.square_line_vertical_square,
                               color: Colors.white70,
                             )),
                         IconButton(
                             onPressed: () {},
                             icon: const Icon(
-                              Icons.home_max_rounded,
+                              CupertinoIcons.phone,
                               color: Colors.white70,
                             )),
                       ],
@@ -108,11 +107,11 @@ class DesktopBody extends StatelessWidget {
                                         borderRadius: BorderRadius.circular(15),
                                         child: Container(
                                           height: size.height * 0.25,
-                                          width: size.width * 0.1,
+                                          width: size.width * 0.15,
                                           decoration: const BoxDecoration(
                                               image: DecorationImage(
                                                   image: AssetImage(
-                                                      "assets/IMG_5434.jpg"),
+                                                      "assets/IMG_0071.JPG"),
                                                   fit: BoxFit.cover)),
                                         ),
                                       ),
@@ -124,22 +123,34 @@ class DesktopBody extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    "My Personal Portfolio",
+                                    "Welcome to my portfolio👋",
                                     style: TextStyle(
-                                        fontSize: size.width * 0.03,
+                                        fontSize: size.width * 0.015,
                                         fontWeight: FontWeight.bold,
                                         color: Colors.white.withOpacity(0.7)),
                                   ),
                                   kHeight(size.height * 0.02),
                                   Text(
-                                    "Crafting Seamless Experiences: From Concept to Deployment for Web & Mobile Apps",
+                                    "Mohammed Jasir Ali",
                                     style: TextStyle(
-                                        fontSize: size.width * 0.01,
+                                        fontSize: size.width * 0.03,
                                         fontWeight: FontWeight.bold,
-                                        color:
-                                            Color.fromARGB(255, 255, 255, 255)
-                                                .withOpacity(0.5)),
+                                        color: const Color.fromARGB(
+                                                255, 255, 255, 255)
+                                            .withOpacity(0.5)),
                                   ),
+                                  kHeight(size.height * 0.02),
+                                  ElevatedButton(
+                                      style: ButtonStyle(
+                                          elevation:
+                                              MaterialStateProperty.all<double>(
+                                                  0),
+                                          backgroundColor:
+                                              MaterialStateProperty.all<Color>(
+                                                  const Color.fromARGB(
+                                                      255, 216, 216, 216))),
+                                      onPressed: () {},
+                                      child: const Text("Download CV"))
                                 ],
                               )
                             ],
